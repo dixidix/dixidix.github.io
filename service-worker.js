@@ -4,19 +4,8 @@ self.addEventListener('install', function(event) {
 
 	var file_to_cache = [
   '/',
-  '/libs/jquery/jquery.min.js',
-  '/libs/angular/angular.min.js',
-  '/libs/angular/angular-ui-router.min.js',
-  '/libs/font-awesome/font-awesome.min.css',
-  '/libs/materialize/materialize.min.css',
-  '/libs/materialize/angular-materialize.min.js',
-  '/app/app.module.js',
-  '/app/app.config.js',
-  '/app/routes/home/home.html',
-  '/app/routes/home/home.js',
-  '/app/routes/bought/bought.html',
-  '/app/routes/bought/bought.js',
-  '/app/styles/styles.css'
+  '/libs/',
+  '/app/'
   ];
 
   event.waitUntil(
