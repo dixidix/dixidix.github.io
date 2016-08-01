@@ -12,7 +12,6 @@ self.addEventListener('install', function(event) {
   '/libs/materialize/angular-materialize.min.js',
   '/app/app.module.js',
   '/app/app.config.js',
-  '/index.html',
   '/app/routes/home/home.html',
   '/app/routes/home/home.js',
   '/app/routes/bought/bought.html',
