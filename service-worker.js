@@ -4,12 +4,12 @@ self.addEventListener('install', function(event) {
 
 	var file_to_cache = [
   '/',
-  '/bower_components/jquery/dist/jquery.min.js',
-  '/bower_components/angular/angular.min.js',
-  '/bower_components/angular-ui-router/release/angular-ui-router.min.js',
-  '/node_modules/font-awesome/css/font-awesome.min.css',
-  '/node_modules/materialize-css/dist/css/materialize.min.css',
-  '/node_modules/angular-materialize/src/angular-materialize.min.js',
+  '/libs/jquery/jquery.min.js',
+  '/libs/angular/angular.min.js',
+  '/libs/angular/angular-ui-router.min.js',
+  '/libs/font-awesome/font-awesome.min.css',
+  '/libs/materialize/materialize.min.css',
+  '/libs/materialize/angular-materialize.min.js',
   '/app/app.module.js',
   '/app/app.config.js',
   '/index.html',
