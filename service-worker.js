@@ -23,10 +23,14 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(cache_name)
     .then(function(cache) {
+      console.log("abrio cache");
       return cache.addAll(file_to_cache);
     })
     .then(function(){
       return self.skipWaiting();
+    })
+    .catch(function(err){
+      console.log("no abrio",err);
     })
     );
 });
