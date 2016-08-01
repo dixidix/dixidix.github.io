@@ -19,7 +19,7 @@
 					</a>
 				</div>
 				<div class="collapsible-body">
-					<form name="home.priceForm" ng-show="!product.price" ng-submit="home.add_price_to_product(product.id, product.newPrice)">				
+					<form ng-show="!product.price" ng-submit="home.add_price_to_product(product.id, product.newPrice)">				
 						<input placeholder="escribi el precio del producto" id="add_price" type="text"  data-ng-model="product.newPrice" maxlength="6" class="validate" required>
 					</form>
 					<div ng-show="product.price">
