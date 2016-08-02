@@ -1,5 +1,5 @@
 var cache_name = 'v1';
-require('serviceworker-cache-polyfill');
+
 var file_to_cache = [
 '/',
 '/libs/jquery/jquery.min.js',
