@@ -3,7 +3,6 @@
   "name": "RemindMe",
   "theme_color": "#0097a7",
   "start_url":"/",
-  "scope":"/",
   "icons": [
     {
       "src": "android.png",
