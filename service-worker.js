@@ -26,12 +26,12 @@ self.addEventListener('install', function(event) {
 	'/libs/fonts/roboto/Roboto-Regular.ttf',
 	'/libs/fonts/roboto/Roboto-Regular.woff',
 	'/libs/fonts/roboto/Roboto-Regular.woff2',
-	'/libs/fonts/font-awesome/fonts/FontAwesome.otf',
-	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.eot',
-	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.svg',
-	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.ttf',
-	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.woff',
-	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.woff2'
+	'/libs/fonts/font-awesome/fonts/FontAwesome.otf?v=4.6.3',
+	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.eot?v=4.6.3',
+	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.svg?v=4.6.3',
+	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.ttf?v=4.6.3',
+	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.woff?v=4.6.3',
+	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.woff2?v=4.6.3'
 	];
 
 	event.waitUntil(
