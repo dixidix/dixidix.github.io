@@ -15,12 +15,6 @@ self.addEventListener('install', function(event) {
 	'/app/routes/bought/bought.js',
 	'/app/styles/styles.css',
 	'/libs/font-awesome/font-awesome.min.css',
-	'/libs/fonts/font-awesome/FontAwesome.otf',
-	'/libs/fonts/font-awesome/fontawesome-webfont.eot',
-	'/libs/fonts/font-awesome/fontawesome-webfont.svg',
-	'/libs/fonts/font-awesome/fontawesome-webfont.ttf',
-	'/libs/fonts/font-awesome/fontawesome-webfont.woff',
-	'/libs/fonts/font-awesome/fontawesome-webfont.woff2',
 	'/libs/materialize/materialize.min.css',
 	'/libs/materialize/materialize.min.js',
 	'/libs/angular/angular-materialize.min.js',
@@ -32,7 +26,13 @@ self.addEventListener('install', function(event) {
 	'/libs/fonts/roboto/Roboto-Medium.woff2',
 	'/libs/fonts/roboto/Roboto-Regular.ttf',
 	'/libs/fonts/roboto/Roboto-Regular.woff',
-	'/libs/fonts/roboto/Roboto-Regular.woff2'
+	'/libs/fonts/roboto/Roboto-Regular.woff2',
+	'/libs/fonts/font-awesome/FontAwesome.otf',
+	'/libs/fonts/font-awesome/fontawesome-webfont.eot',
+	'/libs/fonts/font-awesome/fontawesome-webfont.svg',
+	'/libs/fonts/font-awesome/fontawesome-webfont.ttf',
+	'/libs/fonts/font-awesome/fontawesome-webfont.woff',
+	'/libs/fonts/font-awesome/fontawesome-webfont.woff2'
 	];
 
 	event.waitUntil(
@@ -51,19 +51,7 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('activate', function(event) {  
-	var cacheWhitelist = ['v1'];
-	event.waitUntil(
-		caches.keys()
-		.then(function(cacheNames){
-			return Promise.all(
-				cacheNames.map(function(cacheName){
-					if(cacheWhitelist.indexOf(cacheName) === -1){
-						return caches.delete(cacheName);
-					}
-				})
-				)
-		})
-		);
+	console.log('Activate');
 });
 
 self.addEventListener('fetch', function(event) {
@@ -73,13 +61,18 @@ self.addEventListener('fetch', function(event) {
     caches
     .match(event.request)
     .then(function(response){
-    	return response || fetch(event.request).then(function(response){
-    		caches.open(cache_name).then(function(cache){
-    			cache.put(event.request, response.clone());
-    			console.log('response: ', response);
-    			return response;
+    	console.log("status: ",response.status);
+    	if(response){
+    		return response;
+    	} else {
+    		fetch(event.request).then(function(response){
+    			caches.open(cache_name).then(function(cache){
+    				cache.put(event.request, response.clone());
+    				console.log('response: ', response);
+    				return response;
+    			});
     		});
-    	});
+    	}
     })
     );
 });
