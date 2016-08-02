@@ -19,7 +19,7 @@ self.addEventListener('install', function(event) {
   '/libs/fonts/fontawesome-webfont.woff2',
   '/libs/fonts/fontawesome-webfont.svg',
   '/libs/fonts/fontawesome-webfont.eot',
-  '/libs/fonts/fontawesome-webfont.otf',
+  '/libs/fonts/FontAwesome.otf',
   '/libs/font-awesome/font-awesome.min.css',
   '/libs/materialize/materialize.min.css',
   '/libs/materialize/materialize.min.js',
