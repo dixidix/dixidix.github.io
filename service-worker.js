@@ -1,4 +1,5 @@
 var cache_name = 'v1';
+
 self.addEventListener('install', function(event) {
 	console.log('Install');
 	var file_to_cache = [
@@ -40,29 +41,42 @@ self.addEventListener('install', function(event) {
 			console.log("abrio cache");
 			return cache.addAll(file_to_cache);
 		})
+		.then(function (cache){
+			self.skipWaiting();
+		})
 		.catch(function(err){
 			console.log("no abrio",err);
 		})
 		);
 });
 
-self.addEventListener('activate', function(event) {  
-	console.log('Activate');
+self.addEventListener('activate', event => {
+	clients.claim();
+	event.waitUntil(
+		caches.keys().then(cacheNames => {
+			return Promise.all(
+				cacheNames
+				.filter(n => cachesToKeep.indexOf(n) === -1)
+				.map(name => caches.delete(name))
+				);
+		})
+		);
 });
 
 self.addEventListener('fetch', function(event) {
-
+	if (request.method != 'GET') return;
 	event.respondWith(
-    caches
-    .match(event.request)
-    .then(function(response){
-    	console.log("response: ",response);
-    	return response || fetch(event.request).then(function(response){
-    		caches.open(cache_name).then(function(cache){
-    			cache.put(event.request, response.clone());
-    			return response;
-    		});
-    	});    	
-    })
-    );
+		caches
+		.match(event.request)
+		.then(function(response){
+			
+			console.log("response: ",response);
+			return response || fetch(event.request).then(function(response){
+				caches.open(cache_name).then(function(cache){
+					cache.put(event.request, response.clone());
+					return response;
+				});
+			});    	
+		})
+		);
 });
