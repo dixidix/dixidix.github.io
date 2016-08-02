@@ -17,7 +17,20 @@ self.addEventListener('install', function(event) {
   '/libs/font-awesome/font-awesome.min.css',
   '/libs/materialize/materialize.min.css',
   '/libs/materialize/materialize.min.js',
-  '/libs/angular/angular-materialize.min.js'
+  '/libs/angular/angular-materialize.min.js',
+  '/libs/fonts/roboto/Roboto-Light.ttf',
+  '/libs/fonts/roboto/Roboto-Light.woff',
+  '/libs/fonts/roboto/Roboto-Light.woff2',
+    '/libs/fonts/roboto/Roboto-Medium.ttf',
+  '/libs/fonts/roboto/Roboto-Medium.woff',
+  '/libs/fonts/roboto/Roboto-Medium.woff2',
+    '/libs/fonts/roboto/Roboto-Regular.ttf',
+  '/libs/fonts/roboto/Roboto-Regular.woff',
+  '/libs/fonts/roboto/Roboto-Regular.woff2',
+  '/libs/fonts/fontawesome-webfont.ttf',
+  '/libs/fonts/fontawesome-webfont.woff',
+  '/libs/fonts/fontawesome-webfont.woff2',
+  '/libs/fonts/fontawesome-webfont.svg'
   ];
 
   event.waitUntil(
