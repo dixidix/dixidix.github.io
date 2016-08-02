@@ -14,7 +14,7 @@ self.addEventListener('install', function(event) {
 	'/app/routes/bought/bought.html',
 	'/app/routes/bought/bought.js',
 	'/app/styles/styles.css',
-	'/libs/font-awesome/font-awesome.min.css',
+	'/libs/fonts/font-awesome/css/font-awesome.min.css',
 	'/libs/materialize/materialize.min.css',
 	'/libs/materialize/materialize.min.js',
 	'/libs/angular/angular-materialize.min.js',
@@ -27,12 +27,12 @@ self.addEventListener('install', function(event) {
 	'/libs/fonts/roboto/Roboto-Regular.ttf',
 	'/libs/fonts/roboto/Roboto-Regular.woff',
 	'/libs/fonts/roboto/Roboto-Regular.woff2',
-	'/libs/fonts/font-awesome/FontAwesome.otf',
-	'/libs/fonts/font-awesome/fontawesome-webfont.eot',
-	'/libs/fonts/font-awesome/fontawesome-webfont.svg',
-	'/libs/fonts/font-awesome/fontawesome-webfont.ttf',
-	'/libs/fonts/font-awesome/fontawesome-webfont.woff',
-	'/libs/fonts/font-awesome/fontawesome-webfont.woff2'
+	'/libs/fonts/font-awesome/fonts/FontAwesome.otf',
+	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.eot',
+	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.svg',
+	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.ttf',
+	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.woff',
+	'/libs/fonts/font-awesome/fonts/fontawesome-webfont.woff2'
 	];
 
 	event.waitUntil(
