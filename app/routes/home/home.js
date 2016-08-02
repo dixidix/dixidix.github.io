@@ -10,6 +10,7 @@ function homeCtrl($rootScope){
 		self.product = '';
 	}
 	function add_price_to_product(id, price){
+		console.log("me llamaron!");
 		for (var product in $rootScope.product_list) {
 			if ($rootScope.product_list[product].id == id){
 				$rootScope.product_list[product].price = price;

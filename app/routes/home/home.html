@@ -20,10 +20,11 @@
 				</div>
 				<div class="collapsible-body">
 					<form ng-show="!product.price" ng-submit="home.add_price_to_product(product.id, product.newPrice)">				
-						<input placeholder="escribi el precio del producto" id="add_price" type="text"  data-ng-model="product.newPrice" maxlength="6" class="validate" required>
+						<input placeholder="escribi el precio del producto" id="add_price" type="number"  data-ng-model="product.newPrice" maxlength="6" class="validate" required>
+						<button class="wave-effect btn teal text-white btn-addprice"  type="submit">Agregar</button>
 					</form>
 					<div ng-show="product.price">
-						<a id="addtocart" ng-click="home.buy_product(product,$index)" class="waves-effect waves-grey lighten-5 btn-flat"><i class="fa fa-check"></i> Comprar</a><a id="removefromcart" ng-click="home.remove_product($index)" class="waves-effect waves-waves-grey lighten-5 btn-flat"><i class="fa fa-times"></i> Eliminar</a>	
+						<a id="addtocart" ng-click="home.buy_product(product,$index)" class="waves-effect waves-grey lighten-5 btn-flat btn-action"><i class="fa fa-check"></i> Comprar</a><a id="removefromcart" ng-click="home.remove_product($index)" class="waves-effect waves-waves-grey lighten-5 btn-flat btn-action"><i class="fa fa-times"></i> Eliminar</a>	
 					</div>
 				</div>
 			</li>
