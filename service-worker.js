@@ -64,12 +64,12 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', function(event) {
-	if (request.method != 'GET') return;
+	if (event.request.method != 'GET') return;
 	event.respondWith(
 		caches
 		.match(event.request)
 		.then(function(response){
-			
+
 			console.log("response: ",response);
 			return response || fetch(event.request).then(function(response){
 				caches.open(cache_name).then(function(cache){
