@@ -52,15 +52,15 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('activate', event => {
 	clients.claim();
-	event.waitUntil(
-		caches.keys().then(cacheNames => {
-			return Promise.all(
-				cacheNames
-				.filter(n => cachesToKeep.indexOf(n) === -1)
-				.map(name => caches.delete(name))
-				);
-		})
-		);
+	// event.waitUntil(
+	// 	caches.keys().then(cacheNames => {
+	// 		return Promise.all(
+	// 			cacheNames
+	// 			.filter(n => cachesToKeep.indexOf(n) === -1)
+	// 			.map(name => caches.delete(name))
+	// 			);
+	// 	})
+	// 	);
 });
 
 self.addEventListener('fetch', function(event) {
