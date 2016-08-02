@@ -62,17 +62,13 @@ self.addEventListener('fetch', function(event) {
     .match(event.request)
     .then(function(response){
     	console.log("status: ",response.status);
-    	if(response){
-    		return response;
-    	} else {
-    		fetch(event.request).then(function(response){
-    			caches.open(cache_name).then(function(cache){
-    				cache.put(event.request, response.clone());
-    				console.log('response: ', response);
-    				return response;
-    			});
+    	return response || fetch(event.request).then(function(response){
+    		caches.open(cache_name).then(function(cache){
+    			cache.put(event.request, response.clone());
+    			console.log('response: ', response);
+    			return response;
     		});
-    	}
+    	});    	
     })
     );
 });
