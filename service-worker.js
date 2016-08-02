@@ -17,7 +17,7 @@ self.addEventListener('install', function(event) {
   '/libs/font-awesome/font-awesome.min.css',
   '/libs/materialize/materialize.min.css',
   '/libs/materialize/materialize.min.js',
-  '/libs/materialize/angular-materialize.min.js'
+  '/libs/angular/angular-materialize.min.js'
   ];
 
   event.waitUntil(
