@@ -13,7 +13,7 @@ self.addEventListener('install', function(event) {
   '/app/routes/home/home.js',
   '/app/routes/bought/bought.html',
   '/app/routes/bought/bought.js',
-  '/app/styles/styles.css'
+  '/app/styles/styles.css',
   '/libs/font-awesome/font-awesome.min.css',
   '/libs/materialize/materialize.min.css',
   '/libs/materialize/materialize.min.js',
